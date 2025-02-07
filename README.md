@@ -8,6 +8,7 @@ Theoretical Foundations: Implementation of proofs characterizing the limit itera
 
 Advanced Optimization: Support for gradient descent, momentum, Nesterov acceleration, and stochastic gradient descent (SGD).
 Loss Functions: Includes least squares and Huber loss for regression
+Visuals: Shows the iteration process with hyperplanes and iteration versus component norm
 
 Singular Value Decomposition (SVD) for subspace analysis
 Quadratic programming for minimal distance validation
@@ -21,19 +22,5 @@ Practitioners interested in understanding the behavior of gradient-based methods
 
 
 
-
-Example Usage
-# Initialize system with custom parameters
-analyzer = ImplicitBiasAnalyzer(n=100, p=200, loss_type='least_squares')
-
-# Run optimization with momentum
-x0 = np.random.randn(200) * 0.1  # Small initialization
-x_final = analyzer.optimize(x0, optimizer='momentum', lr=0.01, max_iter=5000)
-
-# Validate theoretical predictions
-analyzer.validate_proof_steps(x0, x_final)
-
-# Visualize results
-analyzer.visualization_engine(x0, x_final)
 
 
